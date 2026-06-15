@@ -55,7 +55,7 @@ Input: {text}"""
         }]
     )
     
-    rraw = response.choices[0].message.content.strip()
+    raw = response.choices[0].message.content.strip()
     raw = re.sub(r'```json|```', '', raw).strip()
     import json
     return json.loads(raw)

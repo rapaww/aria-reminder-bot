@@ -201,7 +201,7 @@ Ketik reminder kamu dengan bebas, contoh:
         
         resp.message(f"✅ Reminder disimpan!{priority_note}\n\n📌 *{parsed['message']}*\n⏰ {parsed['remind_at']}{repeat_note}\n\nKetik *list* untuk lihat semua reminder.")
     except Exception as e:
-        resp.message("❌ Gagal parse reminder. Coba lebih spesifik, contoh: 'ingetin aku beli bensin jam 5 sore'")
+        resp.message(f"❌ Error: {str(e)}")
     
     return str(resp)
 
